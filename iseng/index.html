@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Trick CSS Mudah</title>
+    <style>
+        html {
+            font-family: Helvetica;
+        }
+
+        .super-center-grid {
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+        }
+
+        button {
+            border: transparent;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: crimson;
+            color: #eaeaea;
+            box-shadow: 0 0 8px 1px red;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: crimson;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .title {
+            font-size: 3rem;
+            animation: loncatloncat 3s infinite;
+            text-align: center;
+        }
+
+        img {
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .photos {
+            position: relative;
+        }
+
+        .cinematic-layer {
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            height: 30px;
+        }
+
+        .cinematic-top {
+            top: 0;
+            left: 0;
+        }
+
+        .cinematic-bottom {
+            bottom: 0;
+            left: 0;
+        }
+
+
+        @keyframes loncatloncat {
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(20px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="super-center-grid"><!-- grid bisa diganti pake flex -->
+        <h1 class="title">5 Trick CSS Mudah</h1>
+        <div class="photos">
+            <img src="https://static-cse.canva.com/blob/666271/CinematicFeel29.jpg" width="600">
+            <div class="cinematic-layer cinematic-top"></div>
+            <div class="cinematic-layer cinematic-bottom"></div>
+        </div>
+        <button>LOGIN</button>
+        <p>1. Meletakan element dari kiri atas ke tengah - tengah</p>
+        <p>2. Button</p>
+        <p>3. Animasi Teks Bergerak</p>
+        <p>4. Mainin Gambar</p>
+        <p>5. Bar pada Gambar</p>
+    </div>
+
+</body>
+
+</html>

@@ -24,15 +24,23 @@ PADA MASING-MASING TEST CASE SUDAH TERDAPAT RANGE TERBESAR DAN TERKECIL
 function missingNum(arr) {
   //code here
   const flattenedArray = arr.flat(); // Flatten the 2D array
-  const minNum = Math.min(...flattenedArray.filter(num => typeof num === 'number')); // Find the minimum number
-  const maxNum = Math.max(...flattenedArray.filter(num => typeof num === 'number')); // Find the maximum number
-
+  console.log("flattenedArray =>", flattenedArray);
+  const minNum = Math.min(
+    ...flattenedArray.filter((num) => typeof num === "number")
+  ); // Find the minimum number
+  const maxNum = Math.max(
+    ...flattenedArray.filter((num) => typeof num === "number")
+  ); // Find the maximum number
+  console.log("minNum", minNum);
+  console.log("maxNum", maxNum);
   const missingNumbers = [];
 
   for (let i = minNum; i <= maxNum; i++) {
     if (!flattenedArray.includes(i)) {
+      console.log("i", i);
       missingNumbers.push(i);
     }
+    console.log("missingNumbers", missingNumbers);
   }
 
   return missingNumbers;

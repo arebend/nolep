@@ -40,7 +40,13 @@ function squareNumber(num) {
     return "Minimal input adalah 3";
   }
 
-  const board = new Array(num).fill(null).map(() => new Array(num).fill(0));
+  // const board = [];
+  // for (let i = 0; i < num; i++) {
+  //   const row = new Array(num).fill(0);
+  //   board.push(row);
+  // }
+  // const board = new Array(num).fill(null).map(() => new Array(num).fill(0));
+  console.log("board", board);
   let start = 1;
 
   for (let row = 0; row < num; row++) {
@@ -61,17 +67,17 @@ function squareNumber(num) {
 console.log(squareNumber(3));
 // [ [ 7, 8, 9 ], [ 6, 5, 4 ], [ 1, 2, 3 ] ]
 
-console.log(squareNumber(4));
-// [ [ 16, 15, 14, 13 ],
-//   [ 9, 10, 11, 12 ],
-//   [ 8, 7, 6, 5 ],
-//   [ 1, 2, 3, 4 ] ]
+// console.log(squareNumber(4));
+// // [ [ 16, 15, 14, 13 ],
+// //   [ 9, 10, 11, 12 ],
+// //   [ 8, 7, 6, 5 ],
+// //   [ 1, 2, 3, 4 ] ]
 
-console.log(squareNumber(5));
-// [ [ 21, 22, 23, 24, 25 ],
-//   [ 20, 19, 18, 17, 16 ],
-//   [ 11, 12, 13, 14, 15 ],
-//   [ 10, 9, 8, 7, 6 ],
-//   [ 1, 2, 3, 4, 5 ] ]
+// console.log(squareNumber(5));
+// // [ [ 21, 22, 23, 24, 25 ],
+// //   [ 20, 19, 18, 17, 16 ],
+// //   [ 11, 12, 13, 14, 15 ],
+// //   [ 10, 9, 8, 7, 6 ],
+// //   [ 1, 2, 3, 4, 5 ] ]
 
-console.log(squareNumber(2)); // Minimal input adalah 3
+// console.log(squareNumber(2)); // Minimal input adalah 3

@@ -62,10 +62,12 @@ function squareNumber(num) {
       counter++;
     }
     board.push(row);
+    console.log('row',row);
   }
 
   for (let i = 0; i < num; i++) {
     if (i % 2 !== 0) {
+      console.log('reverse',board[i].reverse());
       board[i] = board[i].reverse();
     }
 
